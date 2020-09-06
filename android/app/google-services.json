@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "516195508396",
+    "firebase_url": "https://greve-correios.firebaseio.com",
+    "project_id": "greve-correios",
+    "storage_bucket": "greve-correios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516195508396:android:0da53a5658623aad8fbf09",
+        "android_client_info": {
+          "package_name": "com.greve_correios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516195508396-crc7rkco0v5osa6rale0reg2bc63c9mo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPKtQF2WyxiESK_xph_o4DkZWONPLfUdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516195508396-crc7rkco0v5osa6rale0reg2bc63c9mo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

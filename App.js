@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Axios from './axios.config';
+import { Button } from 'react-native-paper';
 import {
   SafeAreaView,
   StyleSheet,
@@ -9,12 +10,10 @@ import {
   StatusBar,
   Alert,
 } from 'react-native';
-import {Button} from 'react-native-paper';
 import admob, {
   MaxAdContentRating,
   BannerAd,
   BannerAdSize,
-  TestIds,
 } from '@react-native-firebase/admob';
 
 const App = () => {
@@ -28,15 +27,12 @@ const App = () => {
 
   const [status, setStatus] = useState('');
   const [loadingBtn, setLoadingBtn] = useState(false);
-  const adUnitId = __DEV__
-    ? TestIds.BANNER
-    : 'ca-app-pub-1245913773049448/2413151639';
 
   const verificar = async () => {
     if (status) {
       Alert.alert(
         'CALMA AÍ!',
-        'Você já verificou o sistema recentemente! Tente novamente mais tarde...',
+        'Você já verificou o sistema recentemente! Tente novamente mais tarde...'
       );
       return;
     }
@@ -57,13 +53,14 @@ const App = () => {
               mode="contained"
               color="#0071AD"
               loading={loadingBtn}
-              onPress={verificar}>
+              onPress={verificar}
+            >
               <Text style={styles.btnText}>VERIFICAR</Text>
             </Button>
             <Text style={styles.response}>{status}</Text>
             <View style={styles.ad}>
               <BannerAd
-                unitId={adUnitId}
+                unitId={'ca-app-pub-1245913773049448/2413151639'}
                 size={BannerAdSize.MEDIUM_RECTANGLE}
               />
             </View>
@@ -76,7 +73,7 @@ const App = () => {
 
 const textShadow = {
   textShadowColor: 'rgba(0, 0, 0, 0.75)',
-  textShadowOffset: {width: -1, height: 1},
+  textShadowOffset: { width: -1, height: 1 },
   textShadowRadius: 10,
 };
 
@@ -107,7 +104,7 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
     ...textShadow,
   },
-  ad: {alignSelf: 'center'},
+  ad: { alignSelf: 'center' },
 });
 
 export default App;
